@@ -59,7 +59,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Typography variant="h5" color="primary.main">
-              {'$' + item.price}
+              {'₹' + item.price.toLocaleString()}
             </Typography>
             <Typography variant="h6">/ course</Typography>
           </Box>
