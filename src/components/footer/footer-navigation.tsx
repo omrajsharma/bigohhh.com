@@ -8,25 +8,18 @@ import { FooterSectionTitle } from '@/components/footer'
 import { Typography } from '@mui/material'
 
 const courseMenu: Array<Navigation> = [
-  {
-    label: 'UI/UX Design',
-    path: '#',
-  },
-  {
-    label: 'Mobile Development',
-    path: '#',
-  },
-  {
-    label: 'Machine Learning',
-    path: '#',
-  },
-  {
-    label: 'Web Development',
-    path: '#',
-  },
+  {label: 'Full Stack Web Development',path: '#'},
+  {label: 'Full Stack Software Engineering',path: '#'},
+  {label: 'DSA in java',path: '#'},
+  {label: 'Data Analytics',path: '#'},
 ]
 
-const pageMenu = headerNavigations
+const pageMenu: Array<Navigation> = [
+  { label: 'Home', path: '#' },
+  { label: 'Courses', path: '#' },
+  { label: 'Testimonial', path: '#' },
+  { label: 'Mentor', path: '#' },
+]
 
 const companyMenu: Array<Navigation> = [
   { label: 'Contact Us', path: '#' },
