@@ -19,11 +19,11 @@ interface ExpItemProps {
 const exps: Array<Exp> = [
   {
     label: 'Students',
-    value: '10K+',
+    value: '1,000+',
   },
   {
     label: 'Quality Course',
-    value: '3',
+    value: '4',
   },
   {
     label: 'Experience Mentors',
@@ -148,11 +148,12 @@ const HomeHero: FC = () => {
                     Get Started
                   </StyledButton>
                 </ScrollLink>
-                <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
+                {/* todo: activate button */}
+                {/* <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="outlined" startIcon={<PlayArrowIcon />}>
                     Watch Video
                   </StyledButton>
-                </ScrollLink>
+                </ScrollLink> */}
               </Box>
             </Box>
           </Grid>
@@ -202,7 +203,7 @@ const HomeHero: FC = () => {
               </Box>
             </Box>
             <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/home-hero.png" width={1000} height={750} alt="Hero img" />
+              <Image src="/images/home-hero.png" width={1000} height={750} objectFit='cover' alt="Hero img" />
             </Box>
           </Grid>
         </Grid>

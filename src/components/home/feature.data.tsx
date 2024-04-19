@@ -13,22 +13,22 @@ interface Data {
 export const data: Data[] = [
   {
     title: 'Easy Accessable',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    description: 'Quality coding resources available anytime, anywhere.',
     icon: <ArtTrackIcon />,
   },
   {
     title: 'More Affordable Cost',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    description: 'Budget-friendly pricing plans for coding education.',
     icon: <AttachMoneyIcon />,
   },
   {
     title: 'Flexible Study Time',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    description: 'Learn coding at your convenience.',
     icon: <LocalLibraryIcon />,
   },
   {
     title: 'Consultation With Mentor',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    description: 'Personalized guidance for your coding journey.',
     icon: <ContactSupportIcon />,
   },
 ]

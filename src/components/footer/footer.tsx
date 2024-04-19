@@ -21,7 +21,7 @@ const Footer: FC = () => {
               </Typography> */}
               <Image src="/images/logo.png" alt="Certificate icon" width={200} height={50} quality={97} />
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                BigOhhh is an online learning tech platform.
+                BigOhhh is an online tech learning platform.
               </Typography>
               <FooterSocialLinks />
             </Box>

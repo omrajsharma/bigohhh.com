@@ -3,50 +3,99 @@ import type { Mentor } from '@/interfaces/mentor'
 export const data: Array<Mentor> = [
   {
     id: 1,
-    photo: '/images/mentors/christian-buehner-DItYlc26zVI-unsplash.jpg',
-    name: 'Jhon Dwirian',
-    category: 'UI/UX Design',
-    description:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    company: {
-      name: 'Grab',
-      logo: '/images/companies/grab.png',
-    },
-  },
-  {
-    id: 2,
-    photo: '/images/mentors/jonas-kakaroto-KIPqvvTOC1s-unsplash.jpg',
-    name: 'Leon S Kennedy',
-    category: 'Machine Learning',
-    description:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    photo: '/images/mentors/manvi.jpeg',
+    name: 'Manvi Tyagi',
+    category: 'DSA in Java',
+    // todo: details to be added
+    // description:
+    //   'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     company: {
       name: 'Google',
       logo: '/images/companies/google.png',
     },
   },
   {
-    id: 3,
-    photo: '/images/mentors/noah-buscher-8A7fD6Y5VF8-unsplash.jpg',
-    name: 'Nguyễn Thuy',
-    category: 'Android Development',
-    description:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    id: 2,
+    photo: '/images/mentors/sourav.webp',
+    name: 'Sourav Jha',
+    category: 'Full Stack Web Development',
+    // description:
+    //   'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     company: {
-      name: 'Airbnb',
-      logo: '/images/companies/airbnb.png',
+      name: 'Microsoft',
+      logo: '/images/companies/microsoft.png',
+    },
+  },
+  {
+    id: 3,
+    photo: '/images/mentors/vaishali.jpeg',
+    name: 'Vaishali',
+    category: 'DSA in Java',
+    // description:
+    //   'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    company: {
+      name: 'Microsoft',
+      logo: '/images/companies/microsoft.png',
     },
   },
   {
     id: 4,
-    photo: '/images/mentors/philip-martin-5aGUyCW_PJw-unsplash.jpg',
-    name: 'Rizki Known',
-    category: 'Fullstack Development',
-    description:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    photo: '/images/mentors/tushar.jpeg',
+    name: 'Tushar Monga',
+    category: 'App Development',
+    // description:
+    //   'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     company: {
-      name: 'Microsoft',
-      logo: '/images/companies/microsoft.png',
+      name: 'Zomato',
+      logo: '/images/companies/zomato.png',
+    },
+  },
+  {
+    id: 5,
+    photo: '/images/mentors/unnati.webp',
+    name: 'Unnati',
+    category: 'AI/ML',
+    // description:
+    //   'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    company: {
+      name: 'Zomato',
+      logo: '/images/companies/zomato.png',
+    },
+  },
+  {
+    id: 6,
+    photo: '/images/mentors/sneha.jpeg',
+    name: 'Sneha Sachdeva',
+    category: 'DSA in Java',
+    // description:
+    //   'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    company: {
+      name: 'GoldmanSachs',
+      logo: '/images/companies/goldman.png',
+    },
+  },
+  {
+    id: 7,
+    photo: '/images/mentors/vishal.jpeg',
+    name: 'Vishal Rajput',
+    category: 'Full Stack Web Development',
+    // description:
+    //   'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    company: {
+      name: 'Airtel',
+      logo: '/images/companies/airtel.png',
+    },
+  },
+  {
+    id: 8,
+    photo: '/images/mentors/omraj.jpeg',
+    name: 'Omraj Sharma',
+    category: 'Full Stack Web Development',
+    // description:
+    //   'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    company: {
+      name: 'Wheelseye',
+      logo: '/images/companies/wheelseye.jpeg',
     },
   },
 ]

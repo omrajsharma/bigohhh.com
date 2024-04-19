@@ -5,60 +5,60 @@ export const data: Array<Testimonial> = [
     id: 1,
     title: 'Detailed learning materials',
     content:
-      'Classes that provide very detailed material in term of making UI UX Design starting team making low and hight quality, system designs, using data layout and make prototypes and testing.',
+      "BigOhhh's curriculum was the most comprehensive I've seen. The breakdowns were clear, the exercises were challenging, and the resources provided were incredibly helpful. I felt prepared for everything the bootcamp threw at me.",
     user: {
       id: 1,
-      name: 'Luis Sera',
-      professional: 'UI/UX Engineer',
-      photo: '1.jpg',
+      name: 'Anupam Gupta',
+      professional: 'Software Engineer at Wheelseye',
+      photo: 'anupam.png',
     },
   },
   {
     id: 2,
     title: 'Best Quality Online Course!',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      "I've tried several online coding courses, but BigOhhh is by far the best. The instructors were engaging and knowledgeable, the platform was user-friendly, and the production quality was top-notch. I felt like I was actually in a classroom, even though I was learning from home.",
     user: {
       id: 1,
-      name: 'Riski',
-      professional: 'Software Engineer',
-      photo: '2.jpg',
+      name: 'Akash Sinha',
+      professional: 'Software Engineer at Jio',
+      photo: 'akash.jpeg',
     },
   },
   {
     id: 3,
     title: 'Very complete class',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      "There were no gaps in BigOhhh's bootcamp. Everything I needed to know to succeed was covered, from the fundamentals to the most advanced topics. I felt confident going into my job interviews and landed a great position at a top tech company.",
     user: {
       id: 1,
-      name: 'Nguyễn Văn',
-      professional: 'FullStack Designer',
-      photo: '3.jpg',
+      name: 'Udyan Ojha',
+      professional: 'Software Engineer at Sprinklr',
+      photo: 'udyan.jpeg',
     },
   },
   {
     id: 4,
     title: 'Great Quality!',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      "BigOhhh completely changed my perspective on coding. I went from complete beginner to feeling comfortable building my own projects. The learning environment was so supportive and encouraging, and I made some amazing friends along the way.",
     user: {
       id: 1,
-      name: 'Diana Jordan',
-      professional: 'SEO Expert',
-      photo: '4.jpg',
+      name: 'Harsh Jain',
+      professional: 'Software Engineer at CarDekho',
+      photo: 'harsh.png',
     },
   },
   {
     id: 5,
     title: 'Detailed learning materials',
     content:
-      'Classes that provide very detailed material in term of making UI UX Design starting team making low and hight quality, system designs, using data layout and make prototypes and testing.',
+      "The detailed learning materials at BigOhhh were a lifesaver! Not only were the explanations clear and concise, but the code examples were well-documented and easy to follow. I was able to learn at my own pace and revisit concepts as needed.",
     user: {
       id: 1,
-      name: 'Ashley Graham',
-      professional: 'Back-End Developer',
-      photo: '5.jpg',
+      name: 'Jai Sharma',
+      professional: 'Software Engineer at MakeMyTrip',
+      photo: 'jai.jpeg',
     },
   },
 ]
