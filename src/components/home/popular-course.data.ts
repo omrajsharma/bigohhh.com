@@ -19,22 +19,22 @@ export const data: Array<Course> = [
     price: 89999,
     category: 'Beginner',
   },
-  {
-    id: 3,
-    cover: '/images/courses/christopher-gower-m_HRfLhgABo-unsplash.jpg',
-    title: 'Data Structure & Algorithm in Java',
-    rating: 5,
-    ratingCount: 129,
-    price: 39999,
-    category: 'Beginner',
-  },
-  {
-    id: 4,
-    cover: '/images/courses/true-agency-o4UhdLv5jbQ-unsplash.jpg',
-    title: 'Data Analytics',
-    rating: 5,
-    ratingCount: 257,
-    price: 69999,
-    category: 'Beginner',
-  }
+  // {
+  //   id: 3,
+  //   cover: '/images/courses/christopher-gower-m_HRfLhgABo-unsplash.jpg',
+  //   title: 'Data Structure & Algorithm in Java',
+  //   rating: 5,
+  //   ratingCount: 129,
+  //   price: 39999,
+  //   category: 'Beginner',
+  // },
+  // {
+  //   id: 4,
+  //   cover: '/images/courses/true-agency-o4UhdLv5jbQ-unsplash.jpg',
+  //   title: 'Data Analytics',
+  //   rating: 5,
+  //   ratingCount: 257,
+  //   price: 69999,
+  //   category: 'Beginner',
+  // }
 ]
