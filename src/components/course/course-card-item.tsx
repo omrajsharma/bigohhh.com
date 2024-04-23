@@ -47,7 +47,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
           <Image src={item.cover} width={760} height={760} alt={'Course ' + item.id} />
         </Box>
         <Box sx={{ mb: 2 }}>
-          <Typography component="h2" variant="h5" sx={{ mb: 2, height: 56, overflow: 'hidden', fontSize: '1.2rem' }}>
+          <Typography component="h2" variant="h5" sx={{ mb: 0, height: 56, overflow: 'hidden', fontSize: '1.2rem' }}>
             {item.title}
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -57,7 +57,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
             </Typography>
           </Box>
         </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        {/* <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Typography variant="h5" color="primary.main">
               {'₹' + item.price.toLocaleString()}
@@ -72,7 +72,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
           >
             <ArrowForward />
           </IconButton>
-        </Box>
+        </Box> */}
         <Box sx={{ mt: 2 }}>
           <Typography variant="body1" sx={{ fontWeight: 'bold', mb: 1 }}>
             What We Offer:
