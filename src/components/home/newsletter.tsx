@@ -1,4 +1,5 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
+import React, { useState } from 'react';
 import Box from '@mui/material/Box'
 import InputBase from '@mui/material/InputBase'
 import Container from '@mui/material/Container'
@@ -6,6 +7,18 @@ import Typography from '@mui/material/Typography'
 import { StyledButton } from '../styled-button'
 
 const HomeNewsLetter: FC = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleClick = (): void => {
+    // Show popup
+    setShowPopup(true);
+
+    // Hide popup after 4 seconds
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 4000);
+  };
+
   return (
     <Box sx={{ backgroundColor: 'background.paper', py: { xs: 8, md: 10 } }}>
       <Container>
@@ -46,10 +59,28 @@ const HomeNewsLetter: FC = () => {
               placeholder="Enter your Email Address"
             />
             <Box>
-              <StyledButton disableHoverEffect size="large">
+              <StyledButton disableHoverEffect size="large" onClick={handleClick}>
                 Subscribe
               </StyledButton>
             </Box>
+            {showPopup && (
+              <div
+                style={{
+                  position: 'fixed',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  backgroundColor: '#f0f0f0',
+                  padding: '20px',
+                  borderRadius: '5px',
+                  boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
+                  zIndex: 9999,
+                  
+                }}
+              >
+                Subscribed to Newsletter
+              </div>
+            )}
           </Box>
         </Box>
       </Container>
