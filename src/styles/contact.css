@@ -161,14 +161,6 @@
   color: #646363;
 }
 
-/* styles.css */
-
-.container {
-  max-width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
 .text-center {
   text-align: center;
 }
@@ -184,7 +176,7 @@
   font-weight: bold;
   margin-bottom: 40px;
 }
-/*  */
+
 .company-card {
   padding: 20px;
   border: 1px solid #ccc;
