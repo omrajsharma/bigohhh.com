@@ -60,7 +60,11 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
+<<<<<<< HEAD
 omrajsharma.
+=======
+atharvdesai2002@gmail.com.
+>>>>>>> d54b91b04113a8505d8919df0c6bed517b729be0
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
