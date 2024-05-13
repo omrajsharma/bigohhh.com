@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import { Link as ScrollLink } from 'react-scroll'
 import { navigations } from './navigation.data'
+import Link from 'next/link'
 
 const Navigation: FC = () => {
   return (
@@ -53,7 +54,13 @@ const Navigation: FC = () => {
             {/* eslint-disable-next-line */}
             <img src="/images/headline-curve.svg" alt="Headline curve" />
           </Box>
-          {label}
+          {label == 'About' ? (
+            <Link href={'/about'}>
+              <p style={{ textDecoration: 'none', margin: 0, padding: 0 }}>{label}</p>
+            </Link>
+          ) : (
+            label
+          )}
         </Box>
       ))}
     </Box>
