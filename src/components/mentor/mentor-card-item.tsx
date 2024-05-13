@@ -2,14 +2,20 @@ import React, { FC } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-
 import { Mentor } from '@/interfaces/mentor'
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 interface Props {
   item: Mentor
 }
 
 const MentorCardItem: FC<Props> = ({ item }) => {
+  useGSAP(()=>{
+    const tl = gsap.timeline();
+    
+  })
   return (
     <Box
       sx={{

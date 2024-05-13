@@ -8,10 +8,12 @@ import { Navigation, AuthNavigation } from '@/components/navigation'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
 
+
 const Header: FC = () => {
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
+
 
   return (
     <Box sx={{ backgroundColor: 'background.paper' }}>
