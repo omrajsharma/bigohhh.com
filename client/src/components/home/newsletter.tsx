@@ -1,14 +1,51 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import InputBase from '@mui/material/InputBase'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import { StyledButton } from '../styled-button'
+import React, { FC, useEffect, useState } from 'react';
+import Box from '@mui/material/Box';
+import InputBase from '@mui/material/InputBase';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import { StyledButton } from '../styled-button';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const HomeNewsLetter: FC = () => {
+  const Subscribe = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+          } else {
+            setInView(false);
+          }
+        });
+      },
+      { threshold: 0.5 } 
+    );
+
+    observer.observe(Subscribe.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useGSAP(() => {
+    if (inView) {
+      gsap.from(Subscribe.current, {
+        scale: 0,
+        duration: 1,
+        ease: 'back.out(1.7)',
+      });
+    }
+  }, [inView]);
+
   return (
     <Box sx={{ backgroundColor: 'background.paper', py: { xs: 8, md: 10 } }}>
-      <Container>
+      <Container ref={Subscribe}>
         <Box
           sx={{
             backgroundColor: 'secondary.main',
@@ -54,7 +91,7 @@ const HomeNewsLetter: FC = () => {
         </Box>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default HomeNewsLetter
+export default HomeNewsLetter;

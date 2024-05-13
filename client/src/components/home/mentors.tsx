@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useRef, useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
 import Slider, { Settings } from 'react-slick'
 import Container from '@mui/material/Container'
@@ -10,6 +10,8 @@ import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 import { MentorCardItem } from '@/components/mentor'
 import { data } from './mentors.data'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 interface SliderArrowArrow {
   onClick?: () => void
@@ -19,6 +21,7 @@ interface SliderArrowArrow {
 
 const SliderArrow: FC<SliderArrowArrow> = (props) => {
   const { onClick, type, className } = props
+  
   return (
     <IconButton
       sx={{
@@ -75,6 +78,41 @@ const HomeOurMentors: FC = () => {
       <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
     ),
   }
+  const MentorContainer = useRef(null)
+  const [isMentorVisible, setIsMentorVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsMentorVisible(entry.isIntersecting)
+      },
+      { root: null, rootMargin: '0px', threshold: 0.5 }
+    )
+
+    if (MentorContainer.current) {
+      observer.observe(MentorContainer.current)
+    }
+
+    return () => {
+      if (MentorContainer.current) {
+        observer.unobserve(MentorContainer.current)
+      }
+    }
+  }, [])
+
+  useGSAP(() => {
+    if (isMentorVisible) {
+      const tl = gsap.timeline()
+      tl.from(MentorContainer.current, {
+        duration: 0.5,
+        delay: 1,
+        x: -200,
+        opacity: 0,
+        stagger: 0.1,
+        ease: 'power3.out',
+      })
+    }
+  })
 
   return (
     <Box
@@ -91,7 +129,7 @@ const HomeOurMentors: FC = () => {
         backgroundColor: '#ecf3f3',
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" ref={MentorContainer}>
         <Typography variant="h1" sx={{ fontSize: 40 }}>
           Our Expert Mentors
         </Typography>
