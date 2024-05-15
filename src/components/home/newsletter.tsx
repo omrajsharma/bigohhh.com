@@ -1,22 +1,24 @@
-import { FC } from 'react'
-import React, { useState } from 'react';
-import Box from '@mui/material/Box'
-import InputBase from '@mui/material/InputBase'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import { StyledButton } from '../styled-button'
+import { FC, useState } from 'react';
+import Box from '@mui/material/Box';
+import InputBase from '@mui/material/InputBase';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import { StyledButton } from '../styled-button';
 
 const HomeNewsLetter: FC = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [email, setEmail] = useState('');
 
   const handleClick = (): void => {
-    // Show popup
-    setShowPopup(true);
-
-    // Hide popup after 4 seconds
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
+    // Show popup only if email is not empty
+    if (email.trim() !== '') {
+      setShowPopup(true);
+      
+      // Hide popup after 4 seconds
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 4000);
+    }
   };
 
   return (
@@ -57,6 +59,8 @@ const HomeNewsLetter: FC = () => {
                 mb: { xs: 2, md: 0 },
               }}
               placeholder="Enter your Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <Box>
               <StyledButton disableHoverEffect size="large" onClick={handleClick}>
@@ -75,7 +79,6 @@ const HomeNewsLetter: FC = () => {
                   borderRadius: '5px',
                   boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
                   zIndex: 9999,
-                  
                 }}
               >
                 Subscribed to Newsletter
@@ -85,7 +88,7 @@ const HomeNewsLetter: FC = () => {
         </Box>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default HomeNewsLetter
+export default HomeNewsLetter;
