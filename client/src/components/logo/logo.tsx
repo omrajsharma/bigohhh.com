@@ -6,16 +6,19 @@ interface Props {
   variant?: 'primary' | 'secondary'
 }
 
-const Logo: FC<Props> = ({ onClick, variant }) => {
+const Logo: FC<Props> = ({ variant }) => {
   return (
-    <Box onClick={onClick}>
+    <Box>
+      <a href="https://www.bigohhh.com/" style={{ textDecoration: 'none' }}>
       <Typography
         variant="h4"
         component="h1"
         sx={{ fontWeight: 700, '& span': { color: variant === 'primary' ? 'primary.main' : 'unset' } }}
-      >
+      > 
         Big<span>Ohhh</span>
-      </Typography>
+      </Typography>        
+      </a>
+
     </Box>
   )
 }
