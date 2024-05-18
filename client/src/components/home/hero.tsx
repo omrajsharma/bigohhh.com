@@ -51,7 +51,7 @@ const HomeHero: FC = () => {
   return (
     <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
       <Container maxWidth="lg">
-        <Grid container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
+      <Grid container spacing={2} sx={{ mt: -10, mb: { xs: 8, md: 10 } }}>
           <Grid item xs={12} md={7}>
             <Box
               sx={{
@@ -158,49 +158,34 @@ const HomeHero: FC = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
-            {/* Sertificate badge */}
+            {/* Certificate badge */}
             <Box
-              sx={{
-                position: 'absolute',
-                bottom: -26,
-                left: { xs: 0, md: -150 },
-                boxShadow: 1,
-                borderRadius: 3,
-                px: 2,
-                py: 1.4,
-                zIndex: 1,
-                backgroundColor: 'background.paper',
-                display: { xs: 'none', md: 'flex' },
-                alignItems: 'flex-start',
-                width: 280,
-              }}
-            >
-              <Box
-                sx={{
-                  boxShadow: 1,
-                  borderRadius: '50%',
-                  width: 44,
-                  height: 44,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  mr: 2,
-                  '& img': { width: '32px !important', height: 'auto' },
-                }}
-              >
-                <Image src="/images/certificate.png" alt="Certificate icon" width={50} height={50} quality={97} />
-              </Box>
+          sx={{
+            mt: 6,
+            p: 4,
+            backgroundColor: 'primary.main',
+            borderRadius: 4,
+            color: 'common.white',
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+             <Box sx={{ mt: { xs: 4, md: 0 } }}>
+            <Image src="/images/certificate.png" alt="Certificate" width={150} height={150} />
+          </Box>
               <Box>
-                <Typography
-                  component="h6"
-                  sx={{ color: 'secondary.main', fontSize: '1.1rem', fontWeight: 700, mb: 0.5 }}
-                >
-                  Certificate
-                </Typography>
-                <Typography variant="subtitle1" sx={{ color: 'text.secondary', lineHeight: 1.3 }}>
-                  There are certificates for all courses.
-                </Typography>
-              </Box>
+            <Typography
+              variant="h4"
+              sx={{ fontWeight: 'bold', mb: 2, fontSize: { xs: '1.8rem', md: '1.8rem' } }}
+            >
+              Earn Verifiable Certificates for Every Course
+            </Typography>
+            <Typography variant="body1">
+              Our courses provide industry-recognized certificates upon completion, validating your skills and knowledge. These certificates are highly valued by employers and demonstrate your commitment to professional development.
+            </Typography>
+          </Box>
             </Box>
             <Box sx={{ lineHeight: 0 }}>
               <Image src="/images/home-hero.png" width={1000} height={750} objectFit='cover' alt="Hero img" />
