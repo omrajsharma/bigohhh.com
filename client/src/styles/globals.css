@@ -27,6 +27,9 @@ body {
   /* background-color: var(--color-background); */
   background-color: '#fff';
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @-webkit-keyframes click_animation {
   from {
