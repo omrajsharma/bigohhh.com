@@ -13,7 +13,7 @@ const Header: FC = () => {
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
   const toggleMenu = () => {
-    setVisibleMenu(!visibleMenu);
+    setVisibleMenu(visibleMenu => !visibleMenu);
   };
   return (
     <Box sx={{ backgroundColor: 'background.paper', position: 'sticky', top: 0, zIndex: 1000 }}>

@@ -3,11 +3,11 @@ import Box from '@mui/material/Box'
 import { Link as ScrollLink } from 'react-scroll'
 import { navigations } from './navigation.data'
 
-interface NavigationProps {
+interface NavigationToggle {
   toggleMenu: () => void; // Function to toggle the visibility of the navigation box
 }
 
-const Navigation: FC<NavigationProps> = ({toggleMenu }) => {
+const Navigation: FC<NavigationToggle> = ({toggleMenu }) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       {navigations.map(({ path: destination, label }) => (
