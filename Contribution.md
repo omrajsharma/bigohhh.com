@@ -29,7 +29,7 @@ git remote add upstream https://github.com/omrajsharma/bigohhh.com.git
 git remote -v
 ```
 
-**6.** Always take a pull from the upstream repository to your master branch to keep it at par with the main projec t(updated repository).
+**6.** Always take a pull from the upstream repository to your master branch to keep it at par with the main project (updated repository).
 
 ```
 git pull upstream main
@@ -41,7 +41,7 @@ git pull upstream main
 git checkout -b <your_branch_name>
 ```
 
-**8.** Perfom your desired changes to the code base.
+**8.** Perform your desired changes to the code base.
 
 **9.** Track your changes:heavy_check_mark: .
 

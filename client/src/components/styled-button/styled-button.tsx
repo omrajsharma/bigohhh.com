@@ -87,7 +87,7 @@ const StyledButtonRoot = styled('button', {
     boxShadow: 'none !important',
   }),
 
-  // colors & varians
+  // colors & variants
   ...(color === 'default' &&
     variant === 'contained' && {
       backgroundColor: theme.palette.text.primary,
