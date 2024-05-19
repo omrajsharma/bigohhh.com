@@ -15,8 +15,10 @@ const TermsAndConditions = () => {
             <span style={{ color: 'black', fontSize:'18px' }}>   / Terms and Conditions</span>
           </Title>
         </Link>
-              <h1 align='center'> <span style={{ color: '#17A589'}}>Terms and Conditions</span></h1>
       <Section>
+      <h1 style={{ textAlign: 'center', color: '#17A589' }}>
+        Terms and Conditions
+      </h1>
        <p>Last Updated: 18 May 2024</p>
         <p>
           Welcome to BigOhhh! These terms and conditions outline the rules and regulations for the use of our website.
