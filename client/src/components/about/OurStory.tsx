@@ -10,8 +10,8 @@ export default function OurStory() {
       {/* quote */}
       <div className="quote">
         <p className="story-quote">
-          <span className="double-quote">“</span> We are a team of passionate people whose goal is to improve everyone's
-          life through disruptive products. We build great products to solve your business problems.{' '}
+          <span className="double-quote">“</span> We are a team of passionate people whose goal is to improve everyone
+          &apos;s life through disruptive products. We build great products to solve your business problems.
           <span className="double-quote">”</span>
         </p>
       </div>
