@@ -119,7 +119,7 @@ const HomeFeature: FC = () => {
                   >
                     <Typography variant="h4" sx={{ color: '#32dc88' }}>
                       73%
-                    </Typography>
+                    </Typography> 
                     <CircularProgress
                       sx={{ position: 'absolute', color: 'divider' }}
                       thickness={2}
@@ -128,7 +128,7 @@ const HomeFeature: FC = () => {
                       size={85}
                     />
                     <CircularProgress
-                      disableShrink
+                      // disableShrink
                       thickness={2}
                       variant="determinate"
                       value={73}
