@@ -20,7 +20,8 @@
     "react-dom": "18.0.0",
     "react-scroll": "^1.8.7",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/node": "17.0.25",

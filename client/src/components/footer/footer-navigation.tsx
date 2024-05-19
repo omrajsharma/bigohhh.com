@@ -24,7 +24,7 @@ const pageMenu: Array<Navigation> = [
 const companyMenu: Array<Navigation> = [
   { label: 'Contact Us', path: '#' },
   { label: 'Privacy & Policy', path: '#' },
-  { label: 'Term & Condition', path: '#' },
+  { label: 'Term & Conditions', path: 'terms-and-conditions' },
   { label: 'FAQ', path: '#' },
 ]
 
@@ -35,6 +35,7 @@ interface NavigationItemProps {
 
 const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
   return (
+
     <Link href={path} passHref>
       <MuiLink
         underline="hover"
