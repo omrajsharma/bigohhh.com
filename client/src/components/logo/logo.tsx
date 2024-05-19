@@ -18,7 +18,6 @@ const Logo: FC<Props> = ({ variant }) => {
         Big<span>Ohhh</span>
       </Typography>        
       </a>
-
     </Box>
   )
 }
