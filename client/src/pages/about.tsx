@@ -1,4 +1,3 @@
-
 'use client'
 
 import React from 'react'
@@ -12,8 +11,9 @@ import BigohhNews from '@/components/about/BigohhNews'
 import Investors from '@/components/about/Investors'
 import DreamCompany from '@/components/about/DreamCompany'
 import Questions from '@/components/about/Questions'
+import { NextPageWithLayout } from '@/interfaces/layout'
 
-export default function about() {
+const about: NextPageWithLayout = () => {
   return (
     <MainLayout>
       <Container>
@@ -30,3 +30,4 @@ export default function about() {
   )
 }
 
+export default about
