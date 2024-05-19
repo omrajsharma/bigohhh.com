@@ -158,7 +158,7 @@ const HomeHero: FC = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
-            {/* Sertificate badge */}
+            {/* Certificate badge */}
             <Box
               sx={{
                 position: 'absolute',
