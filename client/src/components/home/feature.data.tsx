@@ -12,7 +12,7 @@ interface Data {
 
 export const data: Data[] = [
   {
-    title: 'Easy Accessable',
+    title: 'Easy Accessible',
     description: 'Quality coding resources available anytime, anywhere.',
     icon: <ArtTrackIcon />,
   },
