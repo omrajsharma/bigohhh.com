@@ -1,7 +1,8 @@
 import { Grid } from '@mui/material'
 import React from 'react'
+import Image from 'next/image'
 
-export default function OurStory() {
+const OurStory: React.FC = (): JSX.Element => {
   return (
     <div className="story">
       <div className="">
@@ -10,8 +11,8 @@ export default function OurStory() {
       {/* quote */}
       <div className="quote">
         <p className="story-quote">
-          <span className="double-quote">“</span> We are a team of passionate people whose goal is to improve everyone
-          &apos;s life through disruptive products. We build great products to solve your business problems.
+          <span className="double-quote">“</span> We are a team of passionate people whose goal is to improve
+          everyone&apos;s life through disruptive products. We build great products to solve your business problems.
           <span className="double-quote">”</span>
         </p>
       </div>
@@ -37,10 +38,11 @@ export default function OurStory() {
           </Grid>
           <Grid item xs={12} md={6} className="flex items-center justify-center">
             <div className="max-w-full">
-              <img
+              <Image
                 src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1715472000&semt=sph"
                 alt="team-picture"
                 height={300}
+                width={450}
                 className="image"
               />
             </div>
@@ -50,3 +52,5 @@ export default function OurStory() {
     </div>
   )
 }
+
+export default OurStory
