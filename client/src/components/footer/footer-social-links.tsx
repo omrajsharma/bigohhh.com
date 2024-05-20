@@ -17,7 +17,7 @@ export const socialLinks: SocialLink[] = [
   {
     name: 'Linkedin',
     link: 'https://www.linkedin.com/company/bigohhh',
-    icon: '/images/icons/linkedin.svg',
+    icon: '/images/icons/new_linkedin.svg',
   },
   {
     name: 'YouTube',
@@ -27,7 +27,7 @@ export const socialLinks: SocialLink[] = [
   {
     name: 'Twitter',
     link: '#',
-    icon: '/images/icons/twitter.svg',
+    icon: '/images/icons/new_x.svg',
   },
   {
     name: 'Dribbble',
