@@ -56,10 +56,14 @@
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }
-
+@media (min-width:320px) and (max-width:641px){
+  .slick-dots{
+    bottom: -25px;
+  }
+}
 .slick-dots {
   position: absolute;
-  bottom: -25px;
+  bottom: -50px;
 
   display: block;
 
