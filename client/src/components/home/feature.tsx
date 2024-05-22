@@ -1,16 +1,17 @@
-import React, { FC } from 'react'
-import Image from 'next/image'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import { styled } from '@mui/material/styles'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import CircularProgress from '@mui/material/CircularProgress'
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress'
-import { data } from './feature.data'
+import React, { FC, useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import CircularProgress from '@mui/material/CircularProgress';
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import { data } from './feature.data';
+import gsap from 'gsap';
 
 interface LinearProgressProps {
-  order: number
+  order: number;
 }
 
 const BorderLinearProgress = styled(LinearProgress, {
@@ -33,16 +34,70 @@ const BorderLinearProgress = styled(LinearProgress, {
       backgroundColor: '#0063ff',
     }),
   },
-}))
+}));
 
 const HomeFeature: FC = () => {
+  const featureRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (featureRef.current) {
+      observer.observe(featureRef.current);
+    }
+
+    return () => {
+      if (featureRef.current) {
+        observer.unobserve(featureRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (inView) {
+      gsap.from(featureRef.current, {
+        opacity: 0,
+        y: 1000,
+        duration: 1,
+        ease: 'power4.out',
+      });
+
+      gsap.from(featureRef.current.querySelector('.feature-content'), {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        delay: 0.5,
+        ease: 'power4.out',
+      });
+
+      gsap.from(featureRef.current.querySelectorAll('.progress-bar'), {
+        opacity: 0,
+        width: 0,
+        duration: 1,
+        delay: 1,
+        stagger: 0.2,
+        ease: 'power4.out',
+      });
+    }
+  }, [inView]);
+
   return (
     <Box id="feature" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background.paper' }}>
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} md={5}>
-            <Box sx={{ position: 'relative' }}>
-              <Image src="/images/home-features.png" width={650} height={678} quality={97} objectFit='cover' alt="Feature img" />
+            <Box ref={featureRef} sx={{ position: 'relative' }}>
+              <Image src="/images/home-features.png" width={650} height={678} quality={97} objectFit="cover" alt="Feature img" />
               <Box
                 sx={{
                   position: 'absolute',
@@ -60,24 +115,20 @@ const HomeFeature: FC = () => {
                 <Typography variant="h5" sx={{ mb: 1 }}>
                   Students love
                 </Typography>
-                <Box sx={{ mb: 2 }}>
-                  <Typography variant="subtitle1" color="text.secondary">
-                    Full Stack Engineering
-                  </Typography>
-                  <BorderLinearProgress variant="determinate" color="inherit" value={95} order={1} />
-                </Box>
-                <Box sx={{ mb: 2 }}>
-                  <Typography variant="subtitle1" color="text.secondary">
-                    Web Development
-                  </Typography>
-                  <BorderLinearProgress variant="determinate" color="inherit" value={90} order={2} />
-                </Box>
-                <Box sx={{ mb: 2 }}>
-                  <Typography variant="subtitle1" color="text.secondary">
-                    Data Analytics
-                  </Typography>
-                  <BorderLinearProgress variant="determinate" color="inherit" value={85} order={3} />
-                </Box>
+                {data.map(({ title, value, order }, index) => (
+                  <Box key={index} sx={{ mb: 2 }}>
+                    <Typography variant="subtitle1" color="text.secondary">
+                      {title}
+                    </Typography>
+                    <BorderLinearProgress
+                      className="progress-bar"
+                      variant="determinate"
+                      color="inherit"
+                      value={value}
+                      order={order}
+                    />
+                  </Box>
+                ))}
               </Box>
 
               <Box
@@ -140,7 +191,7 @@ const HomeFeature: FC = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={7} className="feature-content">
             <Typography
               component="h2"
               sx={{
@@ -174,7 +225,6 @@ const HomeFeature: FC = () => {
                     '& img': { width: { xs: 140, md: 175 }, height: 'auto' },
                   }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
               </Typography>
@@ -224,7 +274,7 @@ const HomeFeature: FC = () => {
         </Grid>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default HomeFeature
+export default HomeFeature;

@@ -7,6 +7,9 @@ import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 interface Exp {
   label: string
@@ -33,6 +36,7 @@ const exps: Array<Exp> = [
 
 const ExpItem: FC<ExpItemProps> = ({ item }) => {
   const { value, label } = item
+ 
   return (
     <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
       <Typography
@@ -48,8 +52,55 @@ const ExpItem: FC<ExpItemProps> = ({ item }) => {
 }
 
 const HomeHero: FC = () => {
+  const HeroSection = useRef(null)
+  const HeroDescription = useRef(null)
+  const HeroDetails = useRef(null)
+  const HeroImg = useRef(null)
+  const HeroImg1 = useRef(null)
+  useGSAP(()=>{
+    const tl = gsap.timeline();
+
+    tl.from(HeroSection.current,{
+      y:100,
+      opacity:0,
+      duration:0.5,
+      delay:1,
+      stagger:0.1,
+      ease:'power3.out'
+    })
+
+    tl.from(HeroDescription.current,{
+      y:100,
+      opacity:0,
+      duration:0.5,
+      stagger:0.1,
+      ease:'power3.out'
+    })
+    
+    gsap.from(HeroDetails.current,{
+      scale:0,
+      delay:1,
+      opacity:0,
+      duration:1,
+      stagger:0.1,
+      ease:'power3.out'
+    })
+
+    gsap.from(HeroImg.current,{
+      scale:0,
+      delay:1,
+      duration:1,
+    })
+
+    gsap.from(HeroImg1.current,{
+      scale:0,
+      delay:1,
+      duration:1,
+    })
+    
+  })
   return (
-    <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
+    <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }} >
       <Container maxWidth="lg">
         <Grid container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
           <Grid item xs={12} md={7}>
@@ -61,8 +112,9 @@ const HomeHero: FC = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
               }}
+              
             >
-              <Box sx={{ mb: 3 }}>
+              <Box sx={{ mb: 3 }} ref={HeroSection} >
                 <Typography
                   component="h2"
                   sx={{
@@ -74,6 +126,7 @@ const HomeHero: FC = () => {
                   }}
                 >
                   <Typography
+
                     component="mark"
                     sx={{
                       position: 'relative',
@@ -92,9 +145,10 @@ const HomeHero: FC = () => {
                         transform: 'rotate(3deg)',
                         '& img': { width: { xs: 98, md: 174 }, height: 'auto' },
                       }}
+                      
                     >
                       {/* eslint-disable-next-line */}
-                      <img src="/images/headline-curve.svg" alt="Headline curve" />
+                      <img  src="/images/headline-curve.svg" alt="Headline curve"  />
                     </Box>
                   </Typography>
                   your{' '}
@@ -135,14 +189,16 @@ const HomeHero: FC = () => {
                   into reality with us!
                 </Typography>
               </Box>
-              <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
+              <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }} ref={HeroDescription}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
                   {
                     "Experience premium learning with structured curriculum, real-world projects, and expert mentorship from top companies from Google, Microsoft, Amazon, and more. Get placement support, 24/7 assistance, and lifetime access for continuous skill enhancement."
                   }
                 </Typography>
               </Box>
-              <Box sx={{ '& button': { mr: 2 } }}>
+              <Box sx={{ '& button': { mr: 2 } }} 
+             ref={HeroImg}
+             >
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="contained">
                     Get Started
@@ -160,6 +216,7 @@ const HomeHero: FC = () => {
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
             {/* Certificate badge */}
             <Box
+             ref={HeroImg1}
               sx={{
                 position: 'absolute',
                 bottom: -26,
@@ -190,10 +247,11 @@ const HomeHero: FC = () => {
               >
                 <Image src="/images/certificate.png" alt="Certificate icon" width={50} height={50} quality={97} />
               </Box>
-              <Box>
+              <Box >
                 <Typography
                   component="h6"
                   sx={{ color: 'secondary.main', fontSize: '1.1rem', fontWeight: 700, mb: 0.5 }}
+                
                 >
                   Certificate
                 </Typography>
@@ -209,7 +267,7 @@ const HomeHero: FC = () => {
         </Grid>
 
         {/* Experience */}
-        <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }}>
+        <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }} ref={HeroDetails} >
           <Grid container spacing={2}>
             {exps.map((item) => (
               <Grid key={item.value} item xs={12} md={4}>

@@ -1,25 +1,28 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Slider, { Settings } from 'react-slick'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import { useTheme, styled } from '@mui/material/styles'
-import { IconButton, useMediaQuery } from '@mui/material'
-import IconArrowBack from '@mui/icons-material/ArrowBack'
-import IconArrowForward from '@mui/icons-material/ArrowForward'
+import React, { FC, useEffect, useState } from 'react';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Slider, { Settings } from 'react-slick';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import { useTheme, styled } from '@mui/material/styles';
+import { IconButton, useMediaQuery } from '@mui/material';
+import IconArrowBack from '@mui/icons-material/ArrowBack';
+import IconArrowForward from '@mui/icons-material/ArrowForward';
 
-import { data } from './popular-course.data'
-import { CourseCardItem } from '@/components/course'
+import { data } from './popular-course.data';
+import { CourseCardItem } from '@/components/course';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 interface SliderArrowArrow {
-  onClick?: () => void
-  type: 'next' | 'prev'
-  className?: 'string'
+  onClick?: () => void;
+  type: 'next' | 'prev';
+  className?: 'string';
 }
 
 const SliderArrow: FC<SliderArrowArrow> = (props) => {
-  const { onClick, type, className } = props
+  const { onClick, type, className } = props;
   return (
     <IconButton
       sx={{
@@ -39,8 +42,8 @@ const SliderArrow: FC<SliderArrowArrow> = (props) => {
     >
       {type === 'next' ? <IconArrowForward sx={{ fontSize: 22 }} /> : <IconArrowBack sx={{ fontSize: 22 }} />}
     </IconButton>
-  )
-}
+  );
+};
 
 const StyledDots = styled('ul')(({ theme }) => ({
   '&.slick-dots': {
@@ -56,11 +59,56 @@ const StyledDots = styled('ul')(({ theme }) => ({
       },
     },
   },
-}))
+}));
 
 const HomePopularCourse: FC = () => {
-  const { breakpoints } = useTheme()
-  const matchMobileView = useMediaQuery(breakpoints.down('md'))
+  const { breakpoints } = useTheme();
+  const matchMobileView = useMediaQuery(breakpoints.down('md'));
+  const [inView, setInView] = useState(false);
+
+  const ProgramsOffer = useRef(null);
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+          } else {
+            setInView(false);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(ProgramsOffer.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useGSAP(() => {
+    if (inView) {
+      var tl = gsap.timeline();
+      tl.from(ProgramsOffer.current, {
+        opacity: 0,
+        duration: 1,
+        scale: 0,
+        stagger: 1.2,
+        ease: 'power2.inOut',
+      });
+      gsap.from(sliderRef.current, {
+        opacity: 0,
+        duration: 1,
+        scale: 0,
+        stagger: 1.2,
+        ease: 'power2.inOut',
+      });
+    }
+  }, [inView]);
 
   const sliderConfig: Settings = {
     infinite: true,
@@ -75,7 +123,7 @@ const HomePopularCourse: FC = () => {
     customPaging: () => (
       <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
     ),
-  }
+  };
 
   return (
     <Box
@@ -101,13 +149,13 @@ const HomePopularCourse: FC = () => {
                 justifyContent: { xs: 'center', md: 'flex-start' },
               }}
             >
-              <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }}>
+              <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }} ref={sliderRef}>
                 Programs We Offer
               </Typography>
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={9}>
+          <Grid item xs={12} md={9} ref={ProgramsOffer}>
             <Slider {...sliderConfig}>
               {data.map((item) => (
                 <CourseCardItem key={String(item.id)} item={item} />
@@ -117,7 +165,7 @@ const HomePopularCourse: FC = () => {
         </Grid>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default HomePopularCourse
+export default HomePopularCourse;
