@@ -41,13 +41,16 @@ const StyledButtonRoot = styled('button', {
   outline: 'none !important',
   transition: theme.transitions.create(['transform']),
 
-  // hover
+  //hover
   '&:hover': {
-    ...(!disableHoverEffect && {
-      transform: 'translateY(-3px)',
+     ...(!disableHoverEffect && {
+     transform: 'translateY(-3px)',
     }),
-  },
-
+  ...(color === 'primary' && {
+    backgroundColor: theme.palette.primary.dark,
+    color: theme.palette.primary.contrastText,
+  }),
+   },
   '& svg': {
     fontSize: 20,
   },
