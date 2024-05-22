@@ -1,0 +1,196 @@
+.heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.about-us {
+  font-size: 25px;
+}
+
+.video-player {
+  border-radius: 20px;
+}
+
+.story {
+  margin-block: 30px;
+}
+
+.story-heading {
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.quote {
+  background: rgb(213, 255, 213);
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.story-quote {
+  font-size: 24px;
+}
+
+.double-quote {
+  font-size: 40px;
+}
+
+.max-w-full {
+  width: '100%';
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.image {
+  border-radius: 30px;
+  max-width: 100%;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.story-part {
+  font-size: 20px;
+}
+
+.card {
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+  text-align: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.m-5 {
+  gap: 20px;
+}
+
+.instructor-btn {
+  text-align: center;
+  align-items: center;
+  padding-inline: 20px;
+  padding-block: 15px;
+}
+
+.aling-center {
+  align-items: center;
+}
+
+.instructor {
+  flex-direction: column;
+}
+
+.instructor-card {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+.instructor-heading {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
+.instructor-position {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  color: gray;
+}
+
+.my-5 {
+  margin-bottom: 40px;
+}
+
+.news-section {
+  background-color: rgb(231, 255, 255);
+}
+
+.news-card {
+  border: 1px solid;
+  padding: 20px;
+  border-radius: 20px;
+  background: white;
+}
+
+.news-image {
+  border-radius: 20px;
+}
+
+.news-date {
+  font-size: 18px;
+  color: blue;
+  font-weight: 600;
+}
+
+.news-title {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.news-content {
+  color: gray;
+  font-size: 20px;
+}
+
+.py-5 {
+  padding-block: 40px;
+}
+
+.investors-card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 20px;
+  margin-block: 20px;
+}
+
+.question-company {
+  text-align: center;
+  color: #646363;
+}
+
+/* styles.css */
+
+.container {
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.question-company {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.story-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.company-card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.flex-col {
+  flex-direction: column;
+}
