@@ -38,7 +38,7 @@ const OurStory: React.FC = (): JSX.Element => {
           </Grid>
           <Grid item xs={12} md={6} className="flex items-center justify-center">
             <div className="max-w-full">
-              <Image
+              <img
                 src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1715472000&semt=sph"
                 alt="team-picture"
                 height={300}
