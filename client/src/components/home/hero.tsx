@@ -162,14 +162,15 @@ const HomeHero: FC = () => {
             <Box
               sx={{
                 position: 'absolute',
-                bottom: -26,
-                left: { xs: 0, md: -150 },
+                bottom: -30,
+                left: { xs: 0, md: -200 },
                 boxShadow: 1,
                 borderRadius: 3,
-                px: 2,
+                px: 1,
                 py: 1.4,
                 zIndex: 1,
-                backgroundColor: 'background.paper',
+                backgroundColor: 'primary.main',
+                color: 'common.white',
                 display: { xs: 'none', md: 'flex' },
                 alignItems: 'flex-start',
                 width: 280,
@@ -188,17 +189,17 @@ const HomeHero: FC = () => {
                   '& img': { width: '32px !important', height: 'auto' },
                 }}
               >
-                <Image src="/images/certificate.png" alt="Certificate icon" width={50} height={50} quality={97} />
+                <Image src="/images/certificate.png" alt="Certificate icon" width={100} height={100} quality={97} />
               </Box>
               <Box>
                 <Typography
-                  component="h6"
-                  sx={{ color: 'secondary.main', fontSize: '1.1rem', fontWeight: 700, mb: 0.5 }}
+                  variant="h6"
+                  sx={{ fontSize: '1.1rem', fontWeight: 700, mb: 0.5 }}
                 >
                   Certificate
                 </Typography>
-                <Typography variant="subtitle1" sx={{ color: 'text.secondary', lineHeight: 1.3 }}>
-                  There are certificates for all courses.
+                <Typography variant="body1" sx={{fontSize: '0.8rem', lineHeight: 1.5 }}>
+                Our courses provide industry-recognized certificates upon completion
                 </Typography>
               </Box>
             </Box>
