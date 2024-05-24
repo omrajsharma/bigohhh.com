@@ -35,7 +35,6 @@ interface NavigationItemProps {
 
 const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
   return (
-
     <Link href={path} passHref>
       <MuiLink
         underline="hover"
