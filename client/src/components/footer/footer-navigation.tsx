@@ -7,6 +7,17 @@ import { FooterSectionTitle } from '@/components/footer'
 import { Typography } from '@mui/material'
 
 const courseMenu: Array<Navigation> = [
+  {label: 'Full Stack Web Development',path: '/full-satck-web-develpment'},
+  {label: 'Full Stack Software Engineering',path: '/full-stack-software-development'},
+  {label: 'DSA in java',path: '/dsa-with-java'},
+  {label: 'Data Analytics',path: '/data-analytics'},
+]
+
+const pageMenu: Array<Navigation> = [
+  { label: 'Home', path: '/' },
+  { label: 'Courses', path: '/popular-courses' },
+  { label: 'Testinomial', path: '/testinomial' },
+  { label: 'Mentor', path: '/mentor' },
   {label: 'Full Stack Web Development', path: '#'},
   {label: 'Full Stack Software Engineering', path: '#'},
   {label: 'DSA in java', path: '#'},
@@ -22,10 +33,10 @@ const pageMenu: Array<Navigation> = [
 
 
 const companyMenu: Array<Navigation> = [
-  { label: 'Contact Us', path: '#' },
-  { label: 'Privacy & Policy', path: '#' },
-  { label: 'Term & Condition', path: '#' },
-  { label: 'FAQ', path: '#' },
+  { label: 'Contact Us', path: '/contact-us' },
+  { label: 'Privacy & Policy', path: '/privacy-policies' },
+  { label: 'Term & Condition', path: '/term-and-conditions' },
+  { label: 'FAQ', path: '/faq' },
 ]
 
 interface NavigationItemProps {
