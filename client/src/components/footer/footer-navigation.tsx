@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Grid from '@mui/material/Grid'
 import MuiLink from '@mui/material/Link'
 import type { Navigation } from '@/interfaces/navigation'
-import { navigations as headerNavigations } from '@/components/navigation/navigation.data'
 import { FooterSectionTitle } from '@/components/footer'
 import { Typography } from '@mui/material'
 
@@ -19,7 +18,19 @@ const pageMenu: Array<Navigation> = [
   { label: 'Courses', path: '/popular-courses' },
   { label: 'Testinomial', path: '/testinomial' },
   { label: 'Mentor', path: '/mentor' },
+  {label: 'Full Stack Web Development', path: '#'},
+  {label: 'Full Stack Software Engineering', path: '#'},
+  {label: 'DSA in java', path: '#'},
+  {label: 'Data Analytics', path: '#'},
 ]
+
+const pageMenu: Array<Navigation> = [
+  { label: 'Home', path: '#' },
+  { label: 'Courses', path: '#popular-course' },
+  { label: 'Testimonial', path: '#testimonial' },
+  { label: 'Mentor', path: '#mentors' },
+]
+
 
 const companyMenu: Array<Navigation> = [
   { label: 'Contact Us', path: '/contact-us' },
@@ -29,9 +40,11 @@ const companyMenu: Array<Navigation> = [
 ]
 
 interface NavigationItemProps {
-  label: string
-  path: string
+  label: string;
+  path: string;
 }
+
+
 
 const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
   return (
@@ -47,8 +60,8 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
         {label}
       </MuiLink>
     </Link>
-  )
-}
+  );
+};
 
 const FooterNavigation: FC = () => {
   return (
