@@ -14,7 +14,7 @@
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-scrollbar);
+  background: linear-gradient(#99e364,#98dcd8);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track,
@@ -26,6 +26,9 @@
 body {
   /* background-color: var(--color-background); */
   background-color: '#fff';
+}
+html {
+  scroll-behavior: smooth;
 }
 
 @-webkit-keyframes click_animation {

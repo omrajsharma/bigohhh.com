@@ -42,7 +42,7 @@
 - Make changes to the cloned repository.
 - Add, Commit and Push.
 - Then in Github, in your cloned repository find the option to make a pull request.
-- Project admin will evaluate your PR and provide remarks accordingly. If it satisfies all the criterias, your PR will be merged and your contributions will be counted.
+- Project admin will evaluate your PR and provide remarks accordingly. If it satisfies all the criteria, your PR will be merged and your contributions will be counted.
 
 ---
 

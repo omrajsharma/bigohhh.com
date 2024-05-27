@@ -10,6 +10,7 @@ import 'slick-carousel/slick/slick.css'
 import '@/styles/globals.css'
 import '@/styles/react-slick.css'
 import { NextPageWithLayout } from '@/interfaces/layout'
+import Script from 'next/script'
 // import 'slick-carousel/slick/slick-theme.css'
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -32,6 +33,20 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <title>BigOhhh - Code Your Dreams</title>
       </Head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-4P61BB8W4Y"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-4P61BB8W4Y');
+        `}
+      </Script>
+
       <MUIProvider>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
