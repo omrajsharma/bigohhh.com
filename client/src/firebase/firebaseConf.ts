@@ -15,13 +15,6 @@ import { getStorage, FirebaseStorage } from "firebase/storage";
 import { Zoom, toast } from "react-toastify";
 
 const firebaseConfig: FirebaseOptions = {
-  apiKey: "AIzaSyAlMyYap3xZieudHQxppcjTHMNZYQPQdZg",
-  authDomain: "bigohhh-dc6d2.firebaseapp.com",
-  projectId: "bigohhh-dc6d2",
-  storageBucket: "bigohhh-dc6d2.appspot.com",
-  messagingSenderId: "952055932719",
-  appId: "1:952055932719:web:7e06ff41f0e2d265e4a3da",
-  measurementId: "G-CE2MLEGGH6"
 };
 
 
