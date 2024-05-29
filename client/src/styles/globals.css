@@ -56,3 +56,20 @@ html {
     opacity: 0;
   }
 }
+
+
+/* Signup page */
+/* style={{ userSelect: "none", pointerEvents:"none", width: "40px", height: "40px", cursor:'pointer'}} */
+.signup-round {
+  user-select: none;
+  pointer-events: none;
+  width: 40px;
+  height: 40px;
+}
+
+.signup-round:hover {
+  cursor: pointer !important;
+}
+.signup-link:hover {
+  cursor: pointer !important;
+}
