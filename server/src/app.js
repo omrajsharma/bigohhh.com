@@ -2,8 +2,11 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import connectDB from './database.js';
 
+// Load environment variables from .env file
 dotenv.config();
+connectDB();
 
 // Creating an instance of Express
 const app = express();
@@ -19,9 +22,5 @@ app.get('/', (req, res) => {
     res.send('Server is running');
 });
 
-// Start the server
-console.log(process.env.PORT);
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+// Export the app for server and testing purposes
+export default app;
