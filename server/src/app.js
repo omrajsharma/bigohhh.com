@@ -4,6 +4,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './database.js';
 
+import subscriberRoutes from './routes/subscriberRoutes.js';
+
 // Load environment variables from .env file
 dotenv.config();
 connectDB();
@@ -16,6 +18,11 @@ app.use(bodyParser.json());
 
 // Use CORS middleware to enable Cross-Origin Resource Sharing
 app.use(cors());
+
+/**
+ * ROUTES
+ */
+app.use('/api', subscriberRoutes);
 
 // Define a route
 app.get('/', (req, res) => {
