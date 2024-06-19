@@ -1,6 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Creating an instance of Express
 const app = express();
@@ -17,6 +20,7 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
+console.log(process.env.PORT);
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
