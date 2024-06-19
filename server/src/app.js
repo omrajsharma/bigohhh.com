@@ -28,6 +28,9 @@ app.use('/api', subscriberRoutes);
 app.get('/', (req, res) => {
     res.send('Server is running');
 });
+app.get('/health', (req, res) => {
+    res.send('I am healthy');
+});
 
 // Export the app for server and testing purposes
 export default app;
