@@ -1,0 +1,75 @@
+/* TermsAndConditions.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+    padding-bottom: 60px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #17A589;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .section p,
+  .section ul {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .section ul {
+    padding-left: 20px;
+  }
+  
+  .section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer {
+    text-align: center;
+    width: 100%;
+    background-color: #17A589;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
