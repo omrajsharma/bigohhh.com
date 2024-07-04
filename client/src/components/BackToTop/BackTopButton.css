@@ -1,0 +1,20 @@
+/* components/BackToTop/BackToTopButton.css */
+
+.backToTopBtn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .backToTopBtn:hover {
+    background-color: #2c5282;
+  }
+  
