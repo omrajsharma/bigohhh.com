@@ -1,5 +1,13 @@
 /client/node_modules
+./client/node_modules
 /server/node_modules
 
 /client/.next/
+
+# Node modules
+node_modules/
+
+# Next.js build output
+.next/
+
 *.env
