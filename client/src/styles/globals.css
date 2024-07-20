@@ -1,7 +1,30 @@
+/* styles/globals.css */
 :root {
-  --color-background: #f5f5f9;
+  --color-background: #ffffff;
+  --color-text: #000000;
   --color-scrollbar: rgb(224, 224, 224);
   --color-scrollbar-hover: #bbb;
+  --color-icon: #ffcc00;
+
+  --color-background-paper:#f5f5f9;
+  --color-background-footer:
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Night mode */
+body.night-mode {
+  --color-background: #000000;
+  --color-text: #ffffff;
+  --color-scrollbar: #333;
+  --color-scrollbar-hover: #666;
+  --color-icon: #ffffff;
+
+  --color-background-paper:#a0a0a0;
 }
 
 ::-webkit-scrollbar {
@@ -23,10 +46,11 @@
   border-radius: 10px;
 }
 
-body {
-  /* background-color: var(--color-background); */
+/* body {
+  background-color: var(--color-background); 
   background-color: '#fff';
-}
+} */
+
 html {
   scroll-behavior: smooth;
 }

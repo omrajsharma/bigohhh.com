@@ -63,7 +63,12 @@ const HomeTestimonial: FC = () => {
   }
 
   return (
-    <Box id="testimonial" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: 'background.paper' }}>
+    <Box id="testimonial" sx={{ pb: { xs: 6, md: 10 }, 
+    // backgroundColor: 'background.paper' 
+    backgroundColor:'var(--color-background)',
+      color: 'var(--color-text)',
+      transition: 'background-color 0.3s, color 0.3s',
+    }}>
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>

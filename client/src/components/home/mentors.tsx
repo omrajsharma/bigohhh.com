@@ -87,7 +87,10 @@ const HomeOurMentors: FC = () => {
           xs: 8,
           md: 12,
         },
-        backgroundColor: '#ecf3f3',
+        // backgroundColor: '#ecf3f3',
+        backgroundColor:'var(--color-background-paper)',
+        color: 'var(--color-text)',
+        transition: 'background-color 0.3s, color 0.3s',
       }}
     >
       <Container maxWidth="lg">
