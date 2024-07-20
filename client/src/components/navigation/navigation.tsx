@@ -4,7 +4,10 @@ import { Link as ScrollLink } from 'react-scroll'
 import { navigations } from './navigation.data'
 import Link from 'next/link'
 
-const Navigation: FC = () => {
+interface NavigationToggle {
+  toggleMenu: () => void; // Function to toggle the visibility of the navigation box
+}
+const Navigation: FC<NavigationToggle> = ({toggleMenu}) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       {navigations.map(({ path: destination, label }) => (
@@ -42,6 +45,7 @@ const Navigation: FC = () => {
               },
             },
           }}
+          onClick={toggleMenu}
         >
           <Box
             sx={{

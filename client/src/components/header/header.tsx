@@ -12,9 +12,11 @@ const Header: FC = () => {
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
-
+  const toggleMenu: () => void = () => {
+    setVisibleMenu(visibleMenu => !visibleMenu);
+};
   return (
-    <Box sx={{ backgroundColor: 'background.paper' }}>
+    <Box sx={{ backgroundColor: 'background.paper', position: 'sticky', top: 0, zIndex: 1000 }}>
       <Container sx={{ py: { xs: 2, md: 3 } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Logo />
@@ -44,7 +46,7 @@ const Header: FC = () => {
             }}
           >
             <Box /> {/* Magic space */}
-            <Navigation />
+            <Navigation toggleMenu={toggleMenu}/>
             <AuthNavigation />
             {visibleMenu && matchMobileView && (
               <IconButton

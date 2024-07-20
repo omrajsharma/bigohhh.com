@@ -36,7 +36,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'Github',
-    link: '#',
+    link: 'https://github.com/omrajsharma/bigohhh.com/',
     icon: '/images/icons/github.svg',
   },
 ]

@@ -1,9 +1,8 @@
 import React, { FC } from 'react'
-import Image from 'next/image'
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-
+import Image from 'next/image';
+import { Box, Typography } from '@mui/material';
 import { Mentor } from '@/interfaces/mentor'
+
 
 interface Props {
   item: Mentor
@@ -13,47 +12,59 @@ const MentorCardItem: FC<Props> = ({ item }) => {
   return (
     <Box
       sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
         px: 1.5,
         py: 5,
+        mx: 2,
+        my:2,
+        borderRadius: 8,
+        boxShadow: 6,
+        backgroundColor: 'white',
       }}
     >
       <Box
         sx={{
-          p: 2,
-          backgroundColor: 'background.paper',
-          borderRadius: 4,
+          position: 'relative',
+          width: 160,
+          height: 160,
+          borderRadius: '50%',
+          overflow: 'hidden',
+          marginBottom: 2,
           transition: (theme) => theme.transitions.create(['box-shadow']),
           '&:hover': {
             boxShadow: 2,
           },
         }}
       >
-        <Box
-          sx={{
-            lineHeight: 0,
-            overflow: 'hidden',
-            borderRadius: 3,
-            height: 200,
-            mb: 2,
-          }}
-        >
-          <Image src={item.photo as string} width={570} height={427} alt={'Mentor ' + item.id} />
-        </Box>
-        <Box sx={{ mb: 2 }}>
-          <Typography component="h2" variant="h4" sx={{ fontSize: '1.4rem' }}>
-            {item.name}
-          </Typography>
-          <Typography sx={{ mb: 2, color: 'text.secondary' }}>{item.category}</Typography>
-          <Typography sx={{ mb: 2, color: 'text.secondary' }} variant="subtitle1">
-            {item.description}
-          </Typography>
+        <Image
+          src={item.photo as string}
+          alt={'Mentor ' + item.id}
+          layout="fill"
+          objectFit="cover"
+        />
+      </Box>
+      <Typography variant="h4" sx={{ fontWeight: 600, marginBottom: 1 }}>
+        {item.name}
+      </Typography>
+      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+        {item.category}
+      </Typography>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'pace-between',
+          alignItems: 'center',
+          marginTop: 2,
+        }}
+      >
           <Box sx={{ '& img': { height: 36 } }}>
-            {/* eslint-disable-next-line */}
             <img src={item.company?.logo} alt={item.company?.name + ' logo'} />
           </Box>
-        </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
+
 export default MentorCardItem
