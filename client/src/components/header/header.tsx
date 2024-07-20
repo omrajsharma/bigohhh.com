@@ -16,7 +16,13 @@ const Header: FC = () => {
     setVisibleMenu(visibleMenu => !visibleMenu);
 };
   return (
-    <Box sx={{ backgroundColor: 'background.paper', position: 'sticky', top: 0, zIndex: 1000 }}>
+    <Box sx={{ 
+    //  backgroundColor: 'background.paper',
+      backgroundColor:'var(--color-background)',
+      color: 'var(--color-text)',
+      transition: 'background-color 0.3s, color 0.3s',
+     position: 'sticky', top: 0, zIndex: 1000 
+     }}>
       <Container sx={{ py: { xs: 2, md: 3 } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Logo />
