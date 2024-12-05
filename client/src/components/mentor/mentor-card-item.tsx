@@ -21,7 +21,16 @@ const MentorCardItem: FC<Props> = ({ item }) => {
         my:2,
         borderRadius: 8,
         boxShadow: 6,
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
+        // transition: 'transform 0.3s, box-shadow 0.3s',
+        '&:hover': {
+          transform: 'scale(1.05)',
+          boxShadow: 4,
+        },
+
+        backgroundColor:'var(--color-background)',
+        color: 'var(--color-text)',
+        transition: 'background-color 0.3s, color 0.3s',
       }}
     >
       <Box

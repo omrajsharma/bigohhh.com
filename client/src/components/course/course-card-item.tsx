@@ -18,12 +18,13 @@ const CourseCardItem: FC<Props> = ({ item }) => {
       sx={{
         px: 1,
         py: 4,
+        
       }}
     >
       <Box
         sx={{
           p: 2,
-          backgroundColor: 'background.paper',
+          //backgroundColor: 'background.paper',
           borderRadius: 4,
           transition: (theme) => theme.transitions.create(['box-shadow']),
           '&:hover': {
@@ -34,6 +35,9 @@ const CourseCardItem: FC<Props> = ({ item }) => {
               boxShadow: 2,
             },
           },
+          backgroundColor:'var(--color-background)',
+          color: 'var(--color-text)',
+      // transition: 'background-color 0.3s, color 0.3s',
         }}
       >
         <Box
