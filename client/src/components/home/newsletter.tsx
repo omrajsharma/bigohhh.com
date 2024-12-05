@@ -46,7 +46,7 @@ const HomeNewsLetter: FC = () => {
               placeholder="Enter your Email Address"
             />
             <Box>
-              <StyledButton disableHoverEffect size="large">
+              <StyledButton  size="large">
                 Subscribe
               </StyledButton>
             </Box>
