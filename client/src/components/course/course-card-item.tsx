@@ -93,10 +93,10 @@ const CourseCardItem: FC<Props> = ({ item }) => {
             <CheckIcon fontSize='small' color='primary' /> 
             24/7 Doubt support from experienced tutors
           </Typography>
-          {/* <Typography variant="body2" sx={{ mb: 1 }}>
+          <Typography variant="body2" sx={{ mb: 1 }}>
             <CheckIcon fontSize='small' color='primary' /> 
             Real-world software development projects with industry-standard tools (Jira, Confluence, Github, Figma)
-          </Typography> */}
+          </Typography>
           <Typography variant="body2" sx={{ mb: 1 }}>
             <CheckIcon fontSize='small' color='primary' /> 
             1:1 mentorship sessions with top tech professionals from leading companies

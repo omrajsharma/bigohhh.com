@@ -23,7 +23,7 @@ const exps: Array<Exp> = [
   },
   {
     label: 'Quality Course',
-    value: '7',
+    value: '4',
   },
   {
     label: 'Experience Mentors',
